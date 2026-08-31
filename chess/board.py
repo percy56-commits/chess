@@ -375,7 +375,7 @@ class Board:
                 moves = 1<<square -8+n*16
             if self.get_bit(self.pos[13-n], square -9+n*18) == 1 or self.get_bit(self.pos[15], square -9+n*18):
                 moves = moves | 1<<square -9+n*18
-            if self.get_bit(self.pos[13-n], square -7+n*14) == 1 or self.get_bit(self.pos[15], square -9+n*18):
+            if self.get_bit(self.pos[13-n], square -7+n*14) == 1 or self.get_bit(self.pos[15], square -7+n*14):
                 moves = moves | 1<<square -7+n*14
             legal_moves[square] = moves
             pawns = self.remove_bit(pawns, square)
