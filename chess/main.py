@@ -1,6 +1,6 @@
 #import modules
 import pygame
-from board import Board
+from test import Board
 #initialize game
 pygame.init()
 
@@ -62,12 +62,12 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-
+    game.draw_pieces(window)
     #whites move
     play = make_a_move(turn%2)
     turn +=1
     game.draw_pieces(window)
-
+    
     
     if play == "mate":
         print("checkmate")
@@ -75,6 +75,15 @@ while running:
     if play =='stalemate':
         print('stalemate')
         running = False
+    eval, start, end = game.minmax_fast(turn%2,4)
+    print(eval, start, end )
+    if start == 0 and end == 0:
+        print("checkmate, you won")
+        running = False
+    else:
+        game.move(start, end)
+    turn +=1
+    game.draw_pieces(window)
 print('game over')
     
     
