@@ -90,7 +90,7 @@ class Board:
                 B = self.remove_bit(B, square)
                 output[square] = Board.piece_names[i] # add piece to output string
 
-        print ("\n      A B C D E F G H ")
+        print ("\n      a b c d e f g h ")
         print ("    __________________ ")
         
         for i in range(8):
