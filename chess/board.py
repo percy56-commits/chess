@@ -78,7 +78,7 @@ class Board:
     piece_names = ['P', 'p', 'R', 'r', 'N', 'n', 'B', 'b', 'Q', 'q', 'K', 'k']
 
     def print_board(self):
-        output = [' ' for i in range(64)] 
+        output = ['.' for i in range(64)] 
 
         # scan the first 12 bitboards for pieces
         for i in range(12): 
