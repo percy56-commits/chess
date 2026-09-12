@@ -1,4 +1,4 @@
-from tempor import Board
+from board import Board
 from movemask import knightmoves, rook_occupancy_masks, rook_move_masks,bishop_occupancy_masks,bishop_move_maks,king_occupancy_masks, Wpawns_occupancy_masks, Wpawns_move_masks,Bpawns_occupancy_masks,Bpawns_move_masks
 
 def get_bit( b, square):
