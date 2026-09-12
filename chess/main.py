@@ -1,9 +1,9 @@
 #import modules
 import pygame
-from tempor import Board
+from board import Board
 from movegen import get_legal_moves
-from thisthinks import minmax_fast
-from thisthinks import minmax
+from engine import minmax_fast
+from engine import minmax
 from openings import openings, convert
 #initialize game
 pygame.init()
